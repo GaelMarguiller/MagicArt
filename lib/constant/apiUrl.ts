@@ -1,0 +1,1 @@
+export const ROOT_URL: string = 'https://api.scryfall.com/sets'

@@ -50,9 +50,9 @@ export async function getAllCardsSet(codeSet: string) {
         ({
             id: allCardSet.id,
             name: allCardSet.name,
-            imgArtCrop: !allCardSet.image_uris || !allCardSet.image_uris.art_crop
-                ? null
-                : allCardSet.image_uris.art_crop,
+            imgArtCrop: [!allCardSet.image_uris || !allCardSet.image_uris.art_crop
+                ? allCardSet.card_faces.map(cardImage => cardImage.image_uris.art_crop)
+                : allCardSet.image_uris.art_crop],
             colors: allCardSet.color_identity,
             artist: allCardSet.artist
         })

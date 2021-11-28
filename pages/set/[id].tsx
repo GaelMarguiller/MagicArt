@@ -27,7 +27,7 @@ export async function getStaticPaths() {
     const paths = await getAllSetIds(ROOT_URL)
     return {
         paths,
-        fallback: false
+        fallback: true
     }
 }
 

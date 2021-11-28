@@ -39,14 +39,14 @@ export async function getAllSetIds(url) {
 
 export async function getAllCardsSet(codeSet: string) {
     const res = await fetch(`https://api.scryfall.com/sets/${codeSet}`);
-    const datum = await res.json();
+    const data = await res.json();
 
-    const searchCardSetUri = datum.search_uri;
+    const searchCardSetUri = data.search_uri;
 
     const request = await fetch(searchCardSetUri);
     const allCardsData = await request.json();
 
-    return allCardsData.data.map(allCardSet =>
+    return allCardsData.data?.map(allCardSet =>
         ({
             id: allCardSet.id,
             name: allCardSet.name,

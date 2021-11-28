@@ -46,7 +46,7 @@ export async function getAllCardsSet(codeSet: string) {
     const request = await fetch(searchCardSetUri);
     const allCardsData = await request.json();
 
-    return allCardsData.data.map(allCardSet =>
+    return await allCardsData.data.map(allCardSet =>
         ({
             id: allCardSet.id,
             name: allCardSet.name,

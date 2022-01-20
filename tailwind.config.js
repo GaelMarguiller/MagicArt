@@ -6,7 +6,14 @@ module.exports = {
       ...theme('colors'),
       DEFAULT: theme('#17140f', 'currentColor'),
     }),
-    extend: {},
+    extend: {
+      colors: {
+        headerFooterBlack: '#1F1F1F',
+        blackBackground: '#333333',
+        textColorHeader: '#A0A0A0'
+      },
+
+    },
   },
   variants: {
     extend: {},

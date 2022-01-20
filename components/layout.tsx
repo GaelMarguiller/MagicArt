@@ -9,9 +9,9 @@ export interface LayoutProps  {
 export default function Layout(props: LayoutProps) {
     return (
         <>
-            <div className='min-h-screen'>
+            <div className='min-h-screen bg-blackBackground'>
                 <Header />
-                <main>{props.children}</main>
+                <main >{props.children}</main>
             </div>
         </>
     )

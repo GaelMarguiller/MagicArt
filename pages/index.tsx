@@ -8,7 +8,7 @@ import {SetsInterface} from '../lib/interface/setsInterface';
 export default function Home({allSetsData}) {
     return (
         <Layout>
-            <section className='max-w-7xl grid grid-cols-1 text-center md:grid-cols-4 m-0 m-auto bg-white'>
+            <section className='max-w-7xl grid grid-cols-1 text-center md:grid-cols-4 m-0 m-auto'>
                 { allSetsData.map((setData) => (
                     <BlockSet
                         blockName={setData.name}
